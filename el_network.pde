@@ -1,10 +1,9 @@
-int NUM_CIRCLES = 100;
+int NUM_CIRCLES = 300;
 Circle[] circles;
 
 void setup() {
   size(800, 800);
   colorMode(HSB, 360, 100, 100);
-  background(0, 0, 30); 
   
   circles = new Circle[NUM_CIRCLES];
   
@@ -12,16 +11,17 @@ void setup() {
   float xPos, yPos, size;
   
   for(int i=0; i < NUM_CIRCLES; i++) {
-    fillColor = color(random(0,360), random(0,100), random(0, 100));
-    strokeColor = color(random(0,360), random(0,100), random(0, 100));
-    xPos = random(0, WIDTH);
-    yPos = random(0, HEIGHT); 
-    size = random(10, (WIDTH/2));
+    fillColor = color(int(random(0,360)), int(random(0,100)), int(random(0, 100)));
+    strokeColor = color(int(random(0,360)), int(random(0,100)), int(random(0, 100)));
+    xPos = int(random(WIDTH)*1000);
+    yPos = int(random(HEIGHT)*1000); 
+    size = int(random(WIDTH*150)+10);
     circles[i] = new Circle(fillColor, strokeColor, xPos, yPos, size);
   }
 }
 
 void draw() {
+  background(0, 0, 30);
   for(int i=0; i < NUM_CIRCLES; i++) {
     circles[i].draw();
   }
@@ -39,6 +39,8 @@ class Circle {
     size = inSize;
   }
   void draw() {
+    fill(fill);
+    stroke(stroke);
     ellipse(posX, posY, size, size);
   }
 }
