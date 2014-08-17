@@ -1,0 +1,8 @@
+# El Network
+## A Processing sketch to play with ellipse primatives
+
+There will likely be many braches here holding experiments, listing will exist on master README.  
+
+### Branches 
+-------- 
+- None yet 
