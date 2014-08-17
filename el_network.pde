@@ -4,6 +4,7 @@ Circle[] circles;
 void setup() {
   size(800, 800);
   colorMode(HSB, 360, 100, 100);
+  frameRate(100);
   
   circles = new Circle[NUM_CIRCLES];
   
@@ -21,7 +22,7 @@ void setup() {
 }
 
 void draw() {
-  background(0, 0, 30);
+  background(0, 0, 100);
   for(int i=0; i < NUM_CIRCLES; i++) {
     circles[i].update();
     circles[i].draw();
@@ -40,8 +41,9 @@ class Circle {
     size = inSize;
   }
   void update() {
-    posX = posX + int(random(-1, 1)*10);
-    posY = posY + int(random(-1, 1)*10);
+    size = size + int(random(-10, 10));
+//    posX = posX + int(random(-1*size, size)/4);
+//    posY = posY + int(random(-1*size, size)/4);
   }
   void draw() {
     fill(fill);
