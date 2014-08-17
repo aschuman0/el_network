@@ -23,6 +23,7 @@ void setup() {
 void draw() {
   background(0, 0, 30);
   for(int i=0; i < NUM_CIRCLES; i++) {
+    circles[i].update();
     circles[i].draw();
   }
 }
@@ -37,6 +38,10 @@ class Circle {
     posX = inPosX;
     posY = inPosY;
     size = inSize;
+  }
+  void update() {
+    posX = posX + int(random(-1, 1)*10);
+    posY = posY + int(random(-1, 1)*10);
   }
   void draw() {
     fill(fill);
