@@ -1,10 +1,10 @@
-int NUM_CIRCLES = 300;
+int NUM_CIRCLES = 700;
 Circle[] circles;
 
 void setup() {
   size(800, 800);
-  colorMode(HSB, 360, 100, 100);
-  frameRate(100);
+  colorMode(HSB, 360, 100, 100, 100);
+  frameRate(20);
   
   circles = new Circle[NUM_CIRCLES];
   
@@ -12,8 +12,8 @@ void setup() {
   float xPos, yPos, size;
   
   for(int i=0; i < NUM_CIRCLES; i++) {
-    fillColor = color(int(random(0,360)), int(random(0,100)), int(random(0, 100)));
-    strokeColor = color(int(random(0,360)), int(random(0,100)), int(random(0, 100)));
+    fillColor = color(int(random(0,360)), int(random(0,100)), int(random(0, 100)), int(random(0, 100)));
+    strokeColor = color(int(random(0,360)), int(random(0,100)), int(random(0, 100)), int(random(0, 100)));
     xPos = int(random(WIDTH)*1000);
     yPos = int(random(HEIGHT)*1000); 
     size = int(random(WIDTH*150)+10);

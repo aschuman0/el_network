@@ -2,6 +2,7 @@
 A Processing sketch to play with ellipse primatives  
 There will likely be many braches here holding experiments, listing will exist on master README.  
 
-### Branches 
+### alpha_fun 
 -------- 
-- None yet 
+This branch is for playing with alpha channel mixing with HSB color model.
+This began with the 'size' branch.
