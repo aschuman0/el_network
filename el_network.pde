@@ -2,9 +2,10 @@ int NUM_CIRCLES = 100;
 Circle[] circles;
 
 void setup() {
-  size(1440, 900);
+//  size(1440, 900);
+  size(500, 500);
   colorMode(HSB, 360, 100, 100, 100);
-  frameRate(30);
+  frameRate(10);
   
   circles = new Circle[NUM_CIRCLES];
   
@@ -22,11 +23,12 @@ void setup() {
 }
 
 void draw() {
-  background(0, 0, 0);
+  background(0, 0,5);
   for(int i=0; i < NUM_CIRCLES; i++) {
     circles[i].update();
     circles[i].draw();
   }
+  saveFrame("gif/img-####.gif"); // for output to file for gif making
 }
 
 class Circle {
